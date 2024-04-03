@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Survey Form</title>
+    <link rel="icon" href="./images/icons-monitor-48.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/survey.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+</head>
+
+<body>
+    <div class="survey-page">
+        <h1 id="title"> Survey Form</h1>
+        <div id="form-container">
+            <p id="description">
+                Let us know how we can imporve freeCodeCamp
+            </p>
+            <form method="GET">
+                <div class="formRow">
+                    <label id="name-label" class="label-cls" for="name">* Name</label>
+                    <div class="input-col">
+                        <input autofocus type="text" name="name" id="name" class="input-field"
+                            placeholder="Enter Your Name" required>
+                        <!--autofocus: khi mở web sẽ đưa con trỏ vào chỗ điền-->
+                        <!--required: bắt buộc phải điền vào rồi mới gửi đi được-->
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label id="email-label" class="label-cls" for="email">* Email</label>
+                    <div class="input-col">
+                        <input type="email" name="email" id="email" class="input-field" placeholder="Enter Your Email">
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label id="age-label" class="label-cls" for="age">* Age</label>
+                    <div class="input-col">
+                        <input type="number" name="age" id="number" min="1" max="100" class="input-field"
+                            placeholder="Age">
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label for="currentPos" class="label-cls">Which option best describes your current role</label>
+                    <div class="input-col">
+                        <select name="currentPos" id="currentPos" class="dropdown">
+                            <option disabled value>Select an option</option>
+                            <option value="student">Student</option>
+                            <option value="job">Full Time Job</option>
+                            <option value="learner">Full Time learner</option>
+                            <option value="preferNo">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label for="useRating" class="label-cls">* How likely is that you would recommend
+                        freeCodeCamp</label>
+                    <li class="radio"><label><input type="radio" name="rating" value="1"
+                                class="useRating">Definitely</label></li>
+                    <li class="radio"><label><input type="radio" name="rating" value="2" class="useRating">Maybe</label>
+                    </li>
+                    <li class="radio"><label><input type="radio" name="rating" value="3" class="useRating">Not
+                            Sure</label></li>
+                </div>
+                <div class="formRow">
+                    <label for="most-like" class="label-cls">What do you like most in FCC</label>
+                    <div class="input-col">
+                        <select name="most-like" id="most-like" class="dropdown">
+                            <option disabled selected value>Select an option</option>
+                            <option value="challenges">Challenges</option>
+                            <option value="projects">Projects</option>
+                            <option value="community">Community</option>
+                            <option value="openSource">Open Source</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="formRow">
+                    <label for="comments" class="label-cls">Any Comment or Suggestion</label>
+                    <div class="input-col">
+                        <textarea id="comments" class="input-field" name="comment"
+                            placeholder="Enter your comment here..."></textarea>
+                    </div>
+                </div>
+                <button id="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
